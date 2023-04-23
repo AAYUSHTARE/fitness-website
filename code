@@ -1,0 +1,118 @@
+EXP 1
+
+PULL
+Open vs code and install git lens
+Create 3 .html files
+In vs code terminal:
+git --version
+git init
+git status
+git add .
+git commit -m "sample txt"
+Create repo in github and copy https link 
+git remote add origin "repo link"
+git push -u origin main (error)
+Sign in with gitlens
+git push repo link
+Pop up to github sign in
+git status
+Refresh github (files pushed)
+
+PUSH
+
+New vs code file
+Terminal:
+git --version
+New folder in vscode
+Terminal:
+git init
+git pull repo link(https) 
+Files pulled
+
+
+
+EXP 2. Demonstrate Building java program (addition of 2 numbers) through Jenkins
+
+Open new repo
+Sign in jenkins
+New item (enter name) freestyle
+Random description
+Source code:git
+In github create file (quick setup)
+File name hey.java put addition code (code class hey) commit
+In jenkins repo url put https link
+Branch */main 
+Build steps 
+execute windows batch comm
+Command:
+javac hey.java
+java hey
+Apply and save
+Build now
+
+
+
+EXP 3. Demonstrate Continuous Integration process in Jenkins. Build a java program every 2 minutes (addition of two numbers) residing in Github repositor
+(SAME AS 2 BUT)
+
+Open new repo
+Sign in jenkins
+New item (enter name) freestyle
+Random description
+Source code:git
+In github create file (quick setup)
+File name hey.java put addition code (code class hey) commit
+In jenkins repo url put https link
+Branch */main 
+
+But check
+Github hook trigger for gitScm
+Build periodically
+Schedule:
+*/2 * * * *
+Build steps:windows batch
+javac hey.java
+java hey
+Apply save 
+Build now
+
+
+
+EXP 4 Demonstrate CI/CD in Jenkins. Consider 3 html files in Github repository and write a scripted pipeline to deploy on Xampp server.
+
+New repo( I have existing😏):
+[Add file Jenkinsfile.txt (put code)
+Add new file:3 .html files
+New item: pipeline
+Random description
+Genral: github project paste https
+Pipeline:pipeline script
+Script:paste from Jenkinfile.txt
+Apply and save
+Build now
+
+
+
+EXP 5. Demonstrate CI/CD in Jenkins. Consider 3 html files in Github repository and write a declarative pipeline to deploy on Xampp server.
+
+New repo( I have existing😏):
+[Add file Jenkinsfile.txt (put code)
+Add new file:3 .html files
+New item: pipeline
+Random description
+Genral: github project paste https
+Pipeline:pipeline script scm
+Scm:Git
+Repo link:https
+Branch main
+Script path:Jenkinsfile.txt
+Apply and save 
+Bud now
+
+
+EXP 6 SELENIUM
+
+
+
+
+

@@ -113,6 +113,46 @@ Bud now
 EXP 6 SELENIUM
 
 
+Create folder selenium
+In it create folder Browser and Demo
+Browser:extract win32 file from
+https://chromedriver.storage.googleapis.com/index.html?path=113.0.5672.24/
 
+Open vs code
+Demo:open sample.py paste:
+
+from selenium import webdriver
+import time
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+print("sample test case started")
+#s=Service(r'./chromedriver.exe')
+driver = webdriver.Chrome(r'location of chromedriver file')
+#driver=webdriver.firefox()
+#driver=webdriver.ie()
+#maximize the window size
+driver.maximize_window()
+#navigate to the url
+driver.get("https://www.google.com/")
+#identify the Google search text box and enter the value
+v=driver.find_element("name","q")
+v.send_keys("Rinku Singh")
+time.sleep(1)
+#click on the Google search button
+v=driver.find_element("name","btnK")
+v.send_keys(Keys.ENTER)
+time.sleep(3)
+#close the browser
+driver.close()
+print("sample test case successfully completed")
+
+Change location of chrome driver file replace to "/" in path
+
+(copy path of chrome driver [shift+right click])
+(r'"C:/Users/dell/Desktop/Selenium/Browser/chromedriver.exe"')
+
+Download python extension
+Pip install selenium
+Run code until it works
 
 
